@@ -1,10 +1,43 @@
 {
   "recipes": [
     {
-      "name": "Tepeche" 
+      "name": "Tepache",
+      "source": "https://nourishedkitchen.com/tepache/",
+      "ingredients": [
+
+      ],
     },
     {
-      "name": "Chana Saag (Chickpea and Spinach Curry"
+      "name": "Chana Saag (Chickpea and Spinach Curry",
+      "source": "https://ministryofcurry.com/chana-saag-chickpeas-and-spinach/",
+      "ingredients": [
+        "1 15 oz can of chickpeas",
+        "4 cups fresh baby spinach",
+        "1 medium tomato",
+        "1 small onion",
+        "1/2 tsp turmeric",
+        "1 tsp red chili powder",
+        "1 tsp grated ginger",
+        "2 cloves garlic finely chopped",
+        "1 tsp ground cumin",
+        "1 tsp garam masala",
+        "1/2 tsp mango powder amchoor",
+        "1 tbsp ghee"
+      ],
+      "method": [
+        "Peel and finely chop the onion. In a medium sized pot, add ghee and when it’s sizzling hot, toss in the chopped onions. Saute the onions for ten minutes with a pinch of salt.",
+        "When the onion starts turning a pale golden, add the ginger and garlic, and saute for another five minutes until the onions turn a darker shade of golden.",
+        "Add the turmeric, chilli and cumin powders and stir for a minute. If the mixture starts getting stuck to the bottom of the pot, add a tablespoon of warm water and scrape it off.",
+        "Next, chop the tomato roughly and chuck it into the masala, stirring for a couple of minutes until it disintegrates. When it does, add half a cup of warm water. lower the heat to medium and let the spices infuse the tomato.",
+        "In about five minutes, when you see oil oozing through the surface of the masala, roughly chop the spinach and stir into the masala. Now, rinse and drain the chickpeas and mix them in.",
+        "Let the chickpeas cook with the spices for another five minutes. To finish, add salt to taste, sprinkle garam masala and amchoor powder all over and serve hot."
+      ]
+    },
+    {
+      "name": "Guiness Cake"
+    },
+    {
+      "name": "TODO"
     }
   ]
 }

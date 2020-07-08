@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const DisplayRecipe: React.FC<{ recipe: Recipe; key: number }> = ({ recipe }) => {
+export const DisplayRecipe: React.FC<{ recipe: Recipe; key: number }> = ({ recipe, key }) => {
   const classes = useStyles();
 
   return (
