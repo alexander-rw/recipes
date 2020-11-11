@@ -1,4 +1,6 @@
 export type Recipe = {
-  name: string;
-  originalSource: string;
+    originalSource: string;
+    name: string;
+    ingredients: string[];
+    method: string[];
 };

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Recipe } from "../@types/Recipe";
-import { Accordion, AccordionSummary, AccordionDetails, Typography, makeStyles } from '@material-ui/core';
+import { Accordion, AccordionSummary, AccordionDetails, Typography, makeStyles } from "@material-ui/core";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({

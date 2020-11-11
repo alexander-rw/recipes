@@ -1,15 +1,15 @@
 import React, { useEffect, Suspense, useState } from 'react';
 import { Container, AppBar, Typography, Toolbar, makeStyles } from '@material-ui/core';
-import axios from 'axios';
+import axios from "axios";
 
-import { Recipe } from "./@types/Recipe";
-import { DisplayRecipe } from "./Components/DisplayRecipe";
+import { Recipe } from "../@types/Recipe";
+import { DisplayRecipe } from "./DisplayRecipe";
 
 const useStyles = makeStyles(theme => ({
   offset: theme.mixins.toolbar,
 }));
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   const classes = useStyles();
 
   const [data, setRecipes] = useState<{ recipes: Recipe[] }>({ recipes: [] });
@@ -39,5 +39,3 @@ const App: React.FC = () => {
     </Container>
   );
 }; 
-
-export { App };
