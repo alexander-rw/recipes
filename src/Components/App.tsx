@@ -1,9 +1,10 @@
-import React, { useEffect, Suspense, useState } from 'react';
-import { Container, AppBar, Typography, Toolbar, makeStyles } from '@material-ui/core';
 import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import { Container, AppBar, Typography, Toolbar, makeStyles } from '@material-ui/core';
 
-import { Recipe } from "../@types/Recipe";
-import { DisplayRecipe } from "./DisplayRecipe";
+import { Recipe } from "../Recipes/Recipe";
+import { AppRecipes } from '../Recipes/AppRecipes';
+import { DisplayRecipes } from "./DisplayRecipes";
 
 const useStyles = makeStyles(theme => ({
   offset: theme.mixins.toolbar,
@@ -12,16 +13,15 @@ const useStyles = makeStyles(theme => ({
 export const App: React.FC = () => {
   const classes = useStyles();
 
-  const [data, setRecipes] = useState<{ recipes: Recipe[] }>({ recipes: [] });
+  const [recipeData, setRecipes] = useState<AppRecipes>({ recipes: [] });
 
-  useEffect(() => {
-    async function getRecipes() {
-      return (await axios.get("/recipes.json")).data.recipes as Recipe[];
-    }
-    getRecipes().then(r => { 
-      console.log(`Recipes loaded: ${r.length}`);
-      setRecipes({ recipes: r });
-    });
+  useEffect(() => { 
+    async function getRecipes() { 
+      const r = await axios.get("/recipes.json");
+      const recipes = r.data.recipes as Recipe[];
+      setRecipes({ recipes });
+    };
+    setTimeout(() => getRecipes(), 1000);
   });
 
   return (
@@ -33,9 +33,7 @@ export const App: React.FC = () => {
           </Typography>
         </Toolbar>
       </AppBar>
-        <Suspense fallback={<div>Loading...</div>}>
-          { data.recipes.map((r: Recipe, i: number) => <DisplayRecipe recipe={r} key={i} />)}
-        </Suspense>
+      <DisplayRecipes recipes={recipeData.recipes} offset={classes.offset} />
     </Container>
   );
 }; 

@@ -1,8 +1,8 @@
-import React from "react";
-
-import { Recipe } from "../@types/Recipe";
 import { Accordion, AccordionSummary, AccordionDetails, Typography, makeStyles } from "@material-ui/core";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import React from "react";
+
+import { DisplayRecipe } from "../Recipes/DisplayRecipe";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,11 +14,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const DisplayRecipe: React.FC<{ recipe: Recipe; key: number }> = ({ recipe, key }) => {
+export const DisplaySingleRecipe: React.FC<DisplayRecipe> = ({ recipe, key }) => {
   const classes = useStyles();
 
   return (
-    <Accordion>
+    <Accordion key={key}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
